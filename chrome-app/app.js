@@ -40,3 +40,15 @@ function sayHi(name) {
 }
 
 sayHi("kim");
+
+const age = parseInt(prompt("How old are you?"));
+
+if (isNaN(age) || age < 0) {
+  console.log("Write positive number please");
+} else if (age < 18) {
+  console.log("you are too young");
+} else if (age >= 18 && age < 50) {
+  console.log("you can drink");
+} else {
+  console.log("tou can not drink");
+}
