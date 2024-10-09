@@ -1,19 +1,32 @@
 const calculator = {
-  add: function (a, b) {
-    console.log(a + b);
+  plus: function (a, b) {
+    return a + b;
   },
   minus: function (a, b) {
-    console.log(a - b);
+    return a - b;
   },
   divide: function (a, b) {
-    console.log(a / b);
+    return a / b;
+  },
+  time: function (a, b) {
+    return a * b;
   },
   powerof: function (a, b) {
-    console.log(a ** b);
+    return a ** b;
   },
 };
 
-console.log(calculator.add(2, 5));
-console.log(calculator.divide(10, 5));
-console.log(calculator.minus(10, 5));
-console.log(calculator.powerof(2, 3));
+const plusResult = calculator.plus(2, 3);
+console.log(plusResult); // 5
+const minusResult = calculator.minus(plusResult, 2);
+console.log(minusResult); // 5-2 = 3
+const timeResult = calculator.time(minusResult, 3);
+console.log(timeResult); // 3*3 = 9
+
+//
+const age = 96;
+function calculateKrAge(ageF) {
+  ageF + 2;
+}
+const krAge = calculateKrAge(age);
+console.log(krAge);
