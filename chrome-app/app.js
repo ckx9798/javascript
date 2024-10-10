@@ -52,3 +52,18 @@ if (isNaN(age) || age < 0) {
 } else {
   console.log("tou can not drink");
 }
+
+// 놀이기구
+const userHeight = 120; // 단위: cm
+
+if (isNaN(userHeight) || userHeight <= 0) {
+  console.log("Please enter a valid height.");
+} else if (userHeight < 100) {
+  console.log("Recommended ride: Kiddie rides only.");
+} else if (userHeight >= 100 && userHeight < 140) {
+  console.log("Recommended ride: Ferris wheel and bumper cars.");
+} else if (userHeight >= 140 && userHeight < 170) {
+  console.log("Recommended ride: Roller coasters and thrill rides.");
+} else {
+  console.log("Recommended ride: All rides are available!");
+}
