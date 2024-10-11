@@ -67,3 +67,22 @@ if (isNaN(userHeight) || userHeight <= 0) {
 } else {
   console.log("Recommended ride: All rides are available!");
 }
+
+//
+
+const title = document.getElementById("title");
+
+console.log(title); //  <h1 id="title" class="sayhi">Hi Js</h1>
+console.log(title.innerText); // Hi Js
+
+title.innerText = "hello Js";
+
+console.log(title.innerText); // hello Js
+
+const hellos = document.getElementsByClassName("hello");
+
+console.log(hellos); // HTMLCollection(5) [h2.hello, h2.hello, h2.hello, h2.hello, h2.hello]
+
+console.log(hellos[0]); // <h2 class="hello">hello</h2>
+
+console.log(document.querySelector(".hello_ h3")); //

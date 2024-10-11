@@ -1,46 +1,22 @@
-// const title = document.getElementById("title");
+const h1 = document.querySelector(".sayhi");
 
-// console.log(title); //  <h1 id="title" class="sayhi">Hi Js</h1>
-// console.log(title.innerText); // Hi Js
+// function handleTitleClick() {
+//   if (h1.style.color === "blue") {
+//     h1.style.color = "tomato";
+//   } else {
+//     h1.style.color = "blue";
+//   }
+// }
 
-// title.innerText = "hello Js";
+function handleTitleClick() {
+  const currentColor = h1.style.color;
+  let newColor;
+  if (currentColor === "blue") {
+    newColor = "tomato";
+  } else {
+    newColor = "blue";
+  }
+  h1.style.color = newColor;
+}
 
-// console.log(title.innerText); // hello Js
-
-// const hellos = document.getElementsByClassName("hello");
-
-// console.log(hellos); // HTMLCollection(5) [h2.hello, h2.hello, h2.hello, h2.hello, h2.hello]
-
-// console.log(hellos[0]); // <h2 class="hello">hello</h2>
-
-// console.log(document.querySelector(".hello_ h3")); //
-
-// //
-
-const title = document.querySelector("#title");
-const color = ["green", "blue", "purple", "red"];
-
-const superEventHandler = {
-  handleMouseenter: function () {
-    title.innerHTML = "The mouse is here";
-    title.style.color = color[0];
-  },
-  handleMouseleave: function () {
-    title.innerHTML = "The mouse is gone";
-    title.style.color = color[1];
-  },
-  handleWindowSize: function () {
-    title.innerHTML = `You just resized`;
-    title.style.color = color[2];
-  },
-  handleContextmenu: function (e) {
-    event.preventDefault();
-    title.innerHTML = "That was a right click";
-    title.style.color = color[3];
-  },
-};
-
-title.addEventListener("mouseenter", superEventHandler.handleMouseenter);
-title.addEventListener("mouseleave", superEventHandler.handleMouseleave);
-window.addEventListener("resize", superEventHandler.handleWindowSize);
-window.addEventListener("contextmenu", superEventHandler.handleContextmenu);
+h1.addEventListener("click", handleTitleClick);
