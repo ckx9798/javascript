@@ -68,7 +68,7 @@ if (isNaN(userHeight) || userHeight <= 0) {
   console.log("Recommended ride: All rides are available!");
 }
 
-//
+// 요소찾기
 
 const title = document.getElementById("title");
 
@@ -86,3 +86,29 @@ console.log(hellos); // HTMLCollection(5) [h2.hello, h2.hello, h2.hello, h2.hell
 console.log(hellos[0]); // <h2 class="hello">hello</h2>
 
 console.log(document.querySelector(".hello_ h3")); //
+
+// 이벤트에 조건 걸기
+const h1 = document.querySelector(".sayhi");
+
+function handleTitleClick() {
+  if (h1.style.color === "blue") {
+    h1.style.color = "tomato";
+  } else {
+    h1.style.color = "blue";
+  }
+}
+
+function handleTitleClick() {
+  const currentColor = h1.style.color;
+  let newColor;
+  if (currentColor === "blue") {
+    newColor = "tomato";
+  } else {
+    newColor = "blue";
+  }
+  h1.style.color = newColor;
+}
+
+h1.addEventListener("click", handleTitleClick);
+
+//
