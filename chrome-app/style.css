@@ -1,3 +1,10 @@
 body {
   background-color: antiquewhite;
 }
+
+.sayhi {
+  color: blue;
+}
+.active {
+  color: tomato;
+}

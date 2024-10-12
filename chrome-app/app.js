@@ -1,22 +1,40 @@
-const h1 = document.querySelector(".sayhi");
+// const h1 = document.querySelector("#title");
 
+// // className
 // function handleTitleClick() {
-//   if (h1.style.color === "blue") {
-//     h1.style.color = "tomato";
+//   const clickedClass = "active";
+//   if (h1.className === clickedClass) {
+//     h1.className = "";
 //   } else {
-//     h1.style.color = "blue";
+//     h1.className = clickedClass;
 //   }
 // }
 
-function handleTitleClick() {
-  const currentColor = h1.style.color;
-  let newColor;
-  if (currentColor === "blue") {
-    newColor = "tomato";
-  } else {
-    newColor = "blue";
+// // classList
+// function handleTitleClick() {
+//   if (h1.classList.contains("active")) {
+//     h1.classList.remove("active");
+//   } else {
+//     h1.classList.add("active");
+//   }
+// }
+
+// // toggle
+// function handleTitleClick() {
+//   h1.classList.toggle("active");
+// }
+
+// h1.addEventListener("click", handleTitleClick);
+
+function handleBodyResize() {
+  let currentWidth = window.innerWidth;
+  let currentColor = window.body.color;
+  if (currentWidth == window.outerWidth * 0.5) {
+    currentColor = "purple";
+  } else if (currentWidth == window.outerWidth * 0.9) {
+    currentColor = "yellow";
   }
-  h1.style.color = newColor;
+  document.body.style.backgroundColor = currentColor;
 }
 
-h1.addEventListener("click", handleTitleClick);
+window.addEventListener("resize", handleBodyResize);
