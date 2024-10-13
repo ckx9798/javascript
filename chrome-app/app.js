@@ -1,40 +1,15 @@
-// const h1 = document.querySelector("#title");
+const loginfoam = document.querySelector("#login_foam");
 
-// // className
-// function handleTitleClick() {
-//   const clickedClass = "active";
-//   if (h1.className === clickedClass) {
-//     h1.className = "";
-//   } else {
-//     h1.className = clickedClass;
-//   }
-// }
+const loginInput = loginfoam.querySelector("input");
+const loginButton = loginfoam.querySelector("button");
 
-// // classList
-// function handleTitleClick() {
-//   if (h1.classList.contains("active")) {
-//     h1.classList.remove("active");
-//   } else {
-//     h1.classList.add("active");
-//   }
-// }
+// const loginInput1 = loginfoam.querySelector("#login_foam input");
+// const loginButton2 = loginfoam.querySelector("#login_foam button");
 
-// // toggle
-// function handleTitleClick() {
-//   h1.classList.toggle("active");
-// }
-
-// h1.addEventListener("click", handleTitleClick);
-
-function handleBodyResize() {
-  let currentWidth = window.innerWidth;
-  let currentColor = window.body.color;
-  if (currentWidth == window.outerWidth * 0.5) {
-    currentColor = "purple";
-  } else if (currentWidth == window.outerWidth * 0.9) {
-    currentColor = "yellow";
-  }
-  document.body.style.backgroundColor = currentColor;
+function handleBtnClick() {
+  console.log(loginInput.value);
+  console.log("hello", loginInput.value);
 }
 
-window.addEventListener("resize", handleBodyResize);
+loginButton.addEventListener("click", handleBtnClick);
+1
