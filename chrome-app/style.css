@@ -8,3 +8,7 @@ body {
 .active {
   color: tomato;
 }
+
+.hidden {
+  display: none;
+}
