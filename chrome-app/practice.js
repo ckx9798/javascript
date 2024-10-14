@@ -112,3 +112,7 @@ function handleTitleClick() {
 h1.addEventListener("click", handleTitleClick);
 
 //
+<form id="login_foam">
+  <input required maxlength="15" type="text" placeholder="what is your name" />
+  <button>클릭</button>
+</form>;
