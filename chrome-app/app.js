@@ -38,8 +38,18 @@ function onLoginSubmit(e) {
   loginfoam.classList.add(HIDDEN_CLASSNAME);
   const userName = loginInput.value;
   localStorage.setItem(USERNAME_KEY, userName);
-  greeting.innerText = `Hello ${userName}`;
-  greeting.classList.remove(HIDDEN_CLASSNAME);
+  paintGreeting(userName);
 }
 
-loginfoam.addEventListener("submit", onLoginSubmit);
+const savedUsername = localStorage.getItem(USERNAME_KEY);
+if (savedUsername === null) {
+  loginfoam.classList.remove("hidden");
+  loginfoam.addEventListener("submit", onLoginSubmit);
+} else {
+  paintGreeting(savedUsername);
+}
+
+function paintGreeting(userName) {
+  greeting.innerText = `Hello ${userName}`;
+  greeting.classList.remove("hidden");
+}
