@@ -29,12 +29,15 @@ link.addEventListener("click", handleLinkClick);
 const loginfoam = document.querySelector("#login_foam");
 const loginInput = loginfoam.querySelector("input");
 const greeting = document.querySelector("#hidden_h1");
+
 const HIDDEN_CLASSNAME = "hidden";
+const USERNAME_KEY = "username";
 
 function onLoginSubmit(e) {
   e.preventDefault();
   loginfoam.classList.add(HIDDEN_CLASSNAME);
   const userName = loginInput.value;
+  localStorage.setItem(USERNAME_KEY, userName);
   greeting.innerText = `Hello ${userName}`;
   greeting.classList.remove(HIDDEN_CLASSNAME);
 }
