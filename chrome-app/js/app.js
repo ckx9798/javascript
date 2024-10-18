@@ -1,7 +1,7 @@
-// const loginButton = loginfoam.querySelector("button");
+// const loginButton = loginForm.querySelector("button");
 
-// const loginInput1 = loginfoam.querySelector("#login_foam input");
-// const loginButton2 = loginfoam.querySelector("#login_foam button");
+// const loginInput1 = loginForm.querySelector("#login_foam input");
+// const loginButton2 = loginForm.querySelector("#login_foam button");
 
 // function handleBtnClick() {
 //   const userName = loginInput.value;
@@ -26,8 +26,8 @@ function handleLinkClick(e) {
 link.addEventListener("click", handleLinkClick);
 */
 
-const loginfoam = document.querySelector("#login_foam");
-const loginInput = loginfoam.querySelector("input");
+const loginForm = document.querySelector("#login_form");
+const loginInput = loginForm.querySelector("input");
 const greeting = document.querySelector("#hidden_h1");
 
 const HIDDEN_CLASSNAME = "hidden";
@@ -35,7 +35,7 @@ const USERNAME_KEY = "username";
 
 function onLoginSubmit(e) {
   e.preventDefault();
-  loginfoam.classList.add(HIDDEN_CLASSNAME);
+  loginForm.classList.add(HIDDEN_CLASSNAME);
   const userName = loginInput.value;
   localStorage.setItem(USERNAME_KEY, userName);
   paintGreeting(userName);
@@ -43,8 +43,8 @@ function onLoginSubmit(e) {
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
 if (savedUsername === null) {
-  loginfoam.classList.remove("hidden");
-  loginfoam.addEventListener("submit", onLoginSubmit);
+  loginForm.classList.remove("hidden");
+  loginForm.addEventListener("submit", onLoginSubmit);
 } else {
   paintGreeting(savedUsername);
 }
