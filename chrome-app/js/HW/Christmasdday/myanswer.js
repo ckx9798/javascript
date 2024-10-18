@@ -5,9 +5,7 @@ function ChristmasClock() {
   const date = new Date();
   const answer = Christmas - date;
   const days = String(Math.floor(answer / (1000 * 60 * 60 * 24))).padStart(
-    2,
-    "0"
-  );
+    2,"0");
   const hours = String(
     Math.floor((answer % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
   ).padStart(2, "0");
