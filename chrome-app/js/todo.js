@@ -7,7 +7,7 @@ function deleteTodo(e) {
   li.remove();
 }
 
-function printTodo(newTodo) {
+function paintTodo(newTodo) {
   const li = document.createElement("li");
   const span = document.createElement("span");
   span.innerText = newTodo;
@@ -19,7 +19,7 @@ function printTodo(newTodo) {
   toDoList.appendChild(li);
 }
 
-const todoArr = [];
+let todoArr = [];
 
 function saveTodo() {
   localStorage.setItem("todos", JSON.stringify(todoArr));
@@ -30,8 +30,16 @@ function handleTodoSubmit(e) {
   const newTodo = toDoInput.value;
   toDoInput.value = "";
   todoArr.push(newTodo);
-  printTodo(newTodo);
+  paintTodo(newTodo);
   saveTodo();
 }
 
 toDoForm.addEventListener("submit", handleTodoSubmit);
+
+const saveTodos = localStorage.getItem("todos");
+
+if (saveTodos) {
+  const parsedTodos = JSON.parse(saveTodos);
+  todoArr = parsedTodos;
+  parsedTodos.forEach(paintTodo);
+}
