@@ -22,7 +22,8 @@ function paintGreeting(userName) {
 
 const userId = localStorage.getItem("id");
 if (userId === null) {
-  loginForm.classList.remove("hidden");
+  loginForm.classList.remove(HIDDEN_CLASNAME);
 } else {
-  hiddenH1.classList.remove("hidden");
+  hiddenH1.classList.remove(HIDDEN_CLASNAME);
+  paintGreeting(userId);
 }
