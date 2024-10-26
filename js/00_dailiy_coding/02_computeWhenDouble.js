@@ -20,13 +20,21 @@ function computeWhenDouble(interestRate) {
   // TODO: 여기에 코드를 작성합니다.
   // 원금 1 < 2 year count 하기
   // 이율 1 * interestRate/100 -> 0.05 (+1 필요)
-  let year = 0; 
+  let year = 0;
   let principal = 1;
-  let rate = 1+ 1*interestRate/100;
-  while(principal < 2){
-    principal = principal*rate
-    year++
+  let rate = 1 + (1 * interestRate) / 100;
+  while (principal < 2) {
+    principal = principal * rate;
+    year++;
   }
-  return year
+  return year;
+}
 
+function computeWhenDouble(interestRate, principal = 1, years = 0) {
+  if (principal >= 2) return years;
+  return computeWhenDouble(
+    interestRate,
+    principal + principal * (interestRate / 100),
+    years + 1
+  );
 }
