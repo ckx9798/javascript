@@ -23,16 +23,33 @@ output = firstCharacter(
 console.log(output); // --> "TcaCSmbtba"
 */
 
+//
+// function firstCharacter(str) {
+//   // TODO: 여기에 코드를 작성합니다.
+//   let result = "";
+//   if(str==="") return ""; // 빈 문자열 출력
+//   let splited = str.split(" "); // 공백기준 자르기 -> ['hello','world']
+//   // splited[0] = 'hello'
+//   for(let i=0; i<splited.length; i++){
+//   // h+w 누적해야하니까 result = result + ~~~
+//   // ~~~ 에는 splited[i]의 0번째
+//     result = result + splited[i][0];
+//   }
+//   return result;
+// }
+
 function firstCharacter(str) {
-  // TODO: 여기에 코드를 작성합니다.
+  // 문자열이 빈 문자열인 경우 빈 문자열을 반환
+  if (str === "") return "";
+
+  // 문자열을 공백(" ")을 기준으로 나누어 단어들의 배열을 만듦
+  const words = str.split(" ");
+
+  // 각 단어의 첫 번째 글자를 추출하여 새로운 문자열을 생성
   let result = "";
-  if(str==="") return ""; // 빈 문자열 출력
-  let splited = str.split(" "); // 공백기준 자르기 -> ['hello','world']
-  // splited[0] = 'hello'
-  for(let i=0; i<splited.length; i++){
-  // h+w 누적해야하니까 result = result + ~~~
-  // ~~~ 에는 splited[i]의 0번째
-    result = result + splited[i][0];
+  for (let i = 0; i < words.length; i++) {
+    result += words[i][0];
   }
+
   return result;
 }
