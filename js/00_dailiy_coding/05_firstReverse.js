@@ -19,12 +19,13 @@ console.log(output); // "setatsedoc evol I"
 배열은 arr.reverse를 통해 쉽게 뒤집을 수 있습니다.
 */
 
-function firstReverse(str) {
-  // TODO: 여기에 코드를 작성합니다.
-    let arr = new Array(...str);
-    let reversed = arr.reverse();
-    let joined = reversed.join("");
-  
-    return joined;
-  }
-  
+// function firstReverse(str) {
+//   // TODO: 여기에 코드를 작성합니다.
+//     let arr = new Array(...str);
+//     let reversed = arr.reverse();
+//     let joined = reversed.join("");
+
+//     return joined;
+//   }
+
+asdad;
