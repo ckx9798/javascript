@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="Login_container">
+        <h1>Login</h1>
+        <form class="login_form">
+          <input type="text" placeholder="Write your ID" required />
+          <input
+            type="password"
+            placeholder="Write your PW"
+            required
+            maxlength="5"
+          />
+          <button>로그인</button>
+        </form>
+      </div>
+      <h1 id="login_id" class="hidden">d</h1>
+
+      <div class="clock_container">
+        <div>
+          <h1>Today`s Time</h1>
+          <h1 id="clock"></h1>
+        </div>
+      </div>
+    </div>
+    <div class="container2">
+      <div>
+        <form id="todo_form">
+          <input type="text" placeholder="Write your todo" required />
+        </form>
+        <ul id="todo_list"></ul>
+      </div>
+      <div id="weather">
+        <span></span>
+        <span></span>
+      </div>
+      <div>
+        <span id="quote"></span>
+      </div>
+    </div>
+  </body>
+
+  <script src="h-clock.js"></script>
+  <script src="h-background.js"></script>
+  <script src="login.js"></script>
+  <script src="h-weather.js"></script>
+  <script src="h-todo.js"></script>
+  <script src="h-quotes.js"></script>
+</html>

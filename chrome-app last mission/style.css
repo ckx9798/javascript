@@ -1,0 +1,51 @@
+body {
+  color: tomato;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 900;
+  padding: 20px;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.clock_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.Login_container {
+  text-align: center;
+}
+
+.form_container {
+  background-color: red;
+  width: 400px;
+  height: auto;
+}
+
+.login_form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 20px;
+  background-color: antiquewhite;
+}
+
+.hidden {
+  display: none;
+}
+
+.container2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+#todo_list {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  text-decoration: none;
+  list-style-type: none;
+}
