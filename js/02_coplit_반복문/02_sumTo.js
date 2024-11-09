@@ -19,9 +19,17 @@ console.log(output); // --> 6
 
 function sumTo(num) {
   // TODO: 여기에 코드를 작성합니다.
-  let result=0;
-  for(let i=0; i<=num; i++){ // <=num 해당 수도 포함하기 때문에 등호포함!
+  let result = 0;
+  for (let i = 0; i <= num; i++) {
+    // <=num 해당 수도 포함하기 때문에 등호포함!
     result = result + i;
   }
   return result;
 }
+
+function sumTo(num) {
+  let answer = 0;
+  for (let i = 0; i <= num; i++) answer += i;
+}
+
+console.log(sumTo(3));
