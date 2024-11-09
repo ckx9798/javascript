@@ -24,10 +24,28 @@ output = findTheBug('bug');
 console.log(output); // --> undefined
 */
 
-function findTheBug(word) {
-  // TODO: 여기에 코드를 작성합니다.
-  for(let i=0; i<word.length; i++){
-    if(word[i]==='#') return i;
+// function findTheBug(word) {
+//   // TODO: 여기에 코드를 작성합니다.
+//   for(let i=0; i<word.length; i++){
+//     if(word[i]==='#') return i;
+//   }
+//   return undefined;
+// }
+
+// function findTheBug(word) {
+//   // TODO: 여기에 코드를 작성합니다.
+//   for(let i=0; i<word.length; i++){
+//     if(word[i]==='#') return i;
+//   }
+//   return undefined;
+// }
+
+function findThebug(word) {
+  const answer = word.split("");
+  for (let i = 0; i < answer.length; i++) {
+    if (answer[i] === "#") {
+      return i;
+    }
   }
   return undefined;
 }
