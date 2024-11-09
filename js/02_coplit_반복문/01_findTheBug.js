@@ -10,8 +10,8 @@ string 타입의 단어
 number 타입을 리턴해야 합니다.
 
 주의 사항
-반복문(for)문을 사용해야 합니다.
 '#' 기호가 없는 경우 undefined를 리턴해야 합니다.
+반복문(for)문을 사용해야 합니다.
 
 입출력 예시
 let output = findTheBug('wo#rd');
@@ -49,3 +49,5 @@ function findThebug(word) {
   }
   return undefined;
 }
+
+console.log(findThebug("wor#d"));
