@@ -26,10 +26,29 @@ console.log(output); // --> false
 function isOdd(num) {
   // TODO: 여기에 코드를 작성합니다.
   num = Math.abs(num); //일단 절대값으로 양수만들기
-  while(num >= 0) {
-    if(num===0) return false; //0이라면 짝수라고 하기
-    if(num===1) return true; // 1만 남으면 홀수
-    num=num-2 // 2씩 계속 빼기 -> num이 0보다 크면 또 5번줄로 돌아가
+  while (num >= 0) {
+    if (num === 0) return false; //0이라면 짝수라고 하기
+    if (num === 1) return true; // 1만 남으면 홀수
+    num = num - 2; // 2씩 계속 빼기 -> num이 0보다 크면 또 5번줄로 돌아가
   }
-
 }
+
+function isOdd(num) {
+  if (num % 2 === 0) {
+    return false;
+  }
+  return true;
+}
+
+function isOdd(num) {
+  while (num !== 0 && num !== 1) {
+    if (num > 0) {
+      num -= 2;
+    } else {
+      num += 2;
+    }
+  }
+  return num === 1;
+}
+
+console.log(isOdd(17));
