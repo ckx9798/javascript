@@ -20,14 +20,23 @@ let output = repeatString('code', 3);
 console.log(output); // --> "codecodecode"
 */
 
+// 답
+// function repeatString(str, num) {
+//   // TODO: 여기에 코드를 작성합니다.
+//   let word = "";
+//   if (str === "") return "";
+
+//   for (let i = 0; i < num; i++) {
+//     word = word + str;
+//   }
+//   return word;
+// }
+
+// 풀이
 function repeatString(str, num) {
-  // TODO: 여기에 코드를 작성합니다.
-  let word = "";
-  if(str === '') return '';
-
-  for(let i=0; i<num; i++){
-    word = word + str;
+  let answer = "";
+  for (let i = 0; i < num; i++) {
+    answer += str;
   }
-  return word;
-
+  return answer;
 }
