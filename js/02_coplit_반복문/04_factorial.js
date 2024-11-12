@@ -27,11 +27,31 @@ factorial(3) = 1 * 2 * 3 = 6
 factorial(4) = 1 * 2 * 3 * 4 = 24
 */
 
+// 답
+// function factorial(num) {
+//   // TODO: 여기에 코드를 작성합니다.
+//   let result = 1;
+//   for(let i=1; i<=num; i++){
+//     result = result*i;
+//   }
+//   return result;
+// }
+
+// 풀이1
 function factorial(num) {
-  // TODO: 여기에 코드를 작성합니다.
-  let result = 1;
-  for(let i=1; i<=num; i++){
-    result = result*i;
+  let answer = 0;
+  for (let i = 1; i <= num; i++) {
+    answer *= i;
+  }
+  return answer;
+}
+
+// 풀이2
+function factorial(num) {
+  let result = 1; // 팩토리얼은 1부터 시작
+  for (let i = 2; i <= num; i++) {
+    // 1은 곱해도 값이 변하지 않으니, 2부터 시작
+    result *= i;
   }
   return result;
 }
