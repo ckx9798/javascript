@@ -21,11 +21,29 @@ output = makeDigits(7);
 console.log(output); // --> "1234567"
 */
 
+// function makeDigits(num) {
+//   // TODO: 여기에 코드를 작성합니다.
+//   let digit = '';
+//   for(let i=1; i<=num; i++){
+//     digit = digit + i;
+//   }
+//   return String(digit);
+// }
+
+풀이1;
 function makeDigits(num) {
-  // TODO: 여기에 코드를 작성합니다.
-  let digit = '';
-  for(let i=1; i<=num; i++){
-    digit = digit + i;
+  let answer = "";
+  for (let i = 1; i <= num; i++) {
+    answer += String(i);
   }
-  return String(digit);
+  return answer;
 }
+
+console.log(makeDigits(5));
+
+// 풀이2
+function makeDigits(num) {
+  return Array.from({ length: num }, (_, i) => i + 1).join("");
+}
+
+console.log(makeDigits(5));
