@@ -40,3 +40,13 @@ function repeatString(str, num) {
   }
   return answer;
 }
+
+function repeatString(str, num) {
+  let answer = "";
+  for (let i = 0; i < num; i++) {
+    answer += str;
+  }
+  return answer;
+}
+
+console.log(repeatString("code", 3));
