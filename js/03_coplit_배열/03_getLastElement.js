@@ -17,10 +17,24 @@ let output = getLastElement([1, 2, 3, 4]);
 console.log(output); // --> 4
 */
 
+// function getLastElement(arr) {
+//   // TODO: 여기에 코드를 작성합니다.
+//   // arr = [1,2,3] > legnth 3 / last index 2;
+//   if (arr.length === 0) return undefined;
+//   return arr[arr.length - 1];
+// }
+
 function getLastElement(arr) {
-  // TODO: 여기에 코드를 작성합니다.
-  // arr = [1,2,3] > legnth 3 / last index 2;
-  if(arr.length === 0) return undefined;
-  return arr[arr.length - 1];
+  if (arr.length === 0) {
+    return undefined;
+  }
+  const answerIndex = arr.length - 1;
+  return arr[answerIndex];
 }
-//done
+
+function getLastElement(arr) {
+  return arr.length > 0 ? arr[arr.length - 1] : undefined;
+}
+
+console.log(getLastElement([1, 2, 3]));
+console.log(getLastElement([]));

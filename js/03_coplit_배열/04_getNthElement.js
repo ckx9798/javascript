@@ -22,11 +22,31 @@ output = getNthElement([1, 3, 5], 3);
 console.log(output); // --> 'out of index range'
 */
 
+// function getNthElement(arr, index) {
+//   // TODO: 여기에 코드를 작성합니다.
+//   // arr=[1,2,3] length:3 index:2
+//   if (arr.length === 0) return undefined;
+//   else if (arr.length - 1 < index) return "out of index range";
+//   else return arr[index];
+// }
+
 function getNthElement(arr, index) {
-  // TODO: 여기에 코드를 작성합니다.
-  // arr=[1,2,3] length:3 index:2
-  if(arr.length === 0) return undefined;
-  else if(arr.length-1 < index) return 'out of index range';
-  else return arr[index];
+  if (arr.length === 0) {
+    return undefined;
+  } else if (arr.length - 1 < index) {
+    return "out of index range";
+  }
+  return arr[index];
 }
-//done
+
+function getNthElement1(arr, index) {
+  return arr.length === 0
+    ? undefined
+    : arr.length - 1 < index
+    ? "out of index range"
+    : arr[index];
+}
+
+console.log(getNthElement([1, 3, 5], 1)); // --> 3
+console.log(getNthElement([1, 3, 5], 3)); // --> 'out of index range'
+console.log(getNthElement([], 0)); // --> undefined
