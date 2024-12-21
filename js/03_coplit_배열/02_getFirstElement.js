@@ -19,6 +19,18 @@ console.log(output); // --> 1
 
 function getFirstElement(arr) {
   // TODO: 여기에 코드를 작성합니다.
-  if(arr.length===0) return undefined;
+  if (arr.length === 0) return undefined;
   return arr[0];
+}
+
+function getFirstElement(arr) {
+  if (arr.length === 0) {
+    return undefined;
+  }
+  return arr[0];
+}
+console.log(getFirstElement([1, 2, 3]));
+
+function getFirstElement(arr) {
+  return (arr && arr[0]) || undefined;
 }
