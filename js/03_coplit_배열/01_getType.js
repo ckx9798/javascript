@@ -31,10 +31,33 @@ console.log(output); // --> 'array'
 배열의 타입을 확인하면 "object" 입니다. 배열을 따로 구분할 수 있는 방법을 검색해 봅니다. how to tell if an object is an array in 자바스크립트
 */
 
-function getType(anything) {
-  // TODO: 여기에 코드를 작성합니다.
-  if(Array.isArray(anything)) return 'array';
-  else if(anything===null) return 'null';
-  else return typeof(anything);
-}
+// function getType(anything) {
+//   // TODO: 여기에 코드를 작성합니다.
+//   if(Array.isArray(anything)) return 'array';
+//   else if(anything===null) return 'null';
+//   else return typeof(anything);
+// }
 
+// 오답
+// const getString = (sth) => {
+//   let answer = typeof sth;
+//   if (Array.isArray(answer)) {
+//     return "array";
+//   }
+//   return answer;
+// };
+
+// 정답
+const getString = (sth) => {
+  if (Array.isArray(sth)) {
+    return "array";
+  }
+  return typeof sth;
+};
+
+console.log(getString("1"));
+console.log(getString(1));
+console.log(getString(false));
+console.log(getString({ name: 1 }));
+console.log(getString([1, 2, 3]));
+console.log(1);
