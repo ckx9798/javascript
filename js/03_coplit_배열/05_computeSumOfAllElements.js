@@ -19,9 +19,19 @@ function computeSumOfAllElements(arr) {
   // TODO: 여기에 코드를 작성합니다.
   // arr=[1,2,3]
   let sum = 0;
-  for(let i=0; i<arr.length; i++){
+  for (let i = 0; i < arr.length; i++) {
     sum += arr[i];
   }
   return sum;
 }
 //done
+
+function computeSumOfAllElements(arr) {
+  let answer = 0;
+  arr.map((item) => {
+    answer += item;
+  });
+  return answer;
+}
+
+console.log(computeSumOfAllElements([1, 2, 3]));
