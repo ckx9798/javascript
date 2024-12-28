@@ -21,12 +21,32 @@ console.log(output); // --> ['R', 'a', 'd', 'a', 'g', 'a', 's', 't']
 function getAllLetters(str) {
   // TODO: 여기에 코드를 작성합니다.
   // str='split' > ['s','p','l','i','t']
-  if(str==="") return [];
+  if (str === "") return [];
   let result = [];
-  for(let i=0; i<str.length; i++){
+  for (let i = 0; i < str.length; i++) {
     result.push(str[i]);
   }
   return result;
-
 }
 //done
+
+function getAllLetters1(str) {
+  let result = str.split("");
+  return result;
+}
+
+function getAllLetters2(str) {
+  let result = [];
+  for (let i = 0; i <= str.length; i++) {
+    if (str[i] !== "") {
+      result.push(str[i]);
+    }
+  }
+  return result;
+}
+
+function getAllLetters3(str) {
+  return str.split("").map((char) => char);
+}
+
+console.log(getAllLetters3("Radagast"));
