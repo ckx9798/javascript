@@ -22,8 +22,14 @@ console.log(output); // --> ['Radagast', 'the', 'Brown']
 function getAllWords(str) {
   // TODO: 여기에 코드를 작성합니다.
   // str > 'abc ddd ccc';
-  if(str==="") return [];
+  if (str === "") return [];
   let result = str.split(" ");
   return result;
-
 }
+
+function getAllWords1(str) {
+  let result = str.split(" ");
+  return result;
+}
+
+console.log(getAllWords1("Radagast the Brown"));
