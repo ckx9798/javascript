@@ -17,7 +17,6 @@ output = getLargestElement([-4, -2, -9]);
 console.log(output); // --> -2
 */
 
-
 function getLargestElement(arr) {
   // TODO: 여기에 코드를 작성합니다.
   // arr = [1,5,2]; > 5
@@ -26,15 +25,37 @@ function getLargestElement(arr) {
   // 0번째 수를 가장 크다고 저장해두기
   let max = arr[0];
   // 반복문 돌리면서 i번째 수가 0번째보다 크면 max=arr[i]
-  for(let i=0; i<arr.length; i++){
-    if(arr[i] > max) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > max) {
       max = arr[i];
     }
   }
   return max;
 }
 
-// reference code
+function getLargestElement1(arr) {
+  for (let i = 0; i <= arr.length; i++) {
+    if (arr[i] > arr[i + 1]) {
+      return arr[i];
+    }
+  }
+}
+
+function getLargestElement2(arr) {
+  let largest = arr[0];
+  for (let i = 1; i <= arr.length; i++) {
+    if (arr[i] > largest) {
+      return arr[i];
+    }
+    return largest;
+  }
+}
+
+console.log(getLargestElement1([1, 4, 3]));
+console.log(getLargestElement([-4, -2, -9]));
+
+output = getLargestElement2([]);
+console.log(output); // --> undefined
 // function getLargestElement(arr) {
 //   // javascript의 다양한 반복문 문법(syntax)을 검색해 봅니다. (`mdn for in` 또는 `mdn for of`)
 //   let max = arr[0];
