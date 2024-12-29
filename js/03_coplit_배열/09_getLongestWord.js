@@ -21,14 +21,31 @@ output = getLongestWord('Teamwork skills will take you anywhere');
 console.log(output); // --> "Teamwork"
 */
 
-function getEvenNumbers(arr) {
-  // TODO: 여기에 코드를 작성합니다.
-  let result = [];
-  for(let num of arr){
-    if(num%2===0){
-      result.push(num);
+function getLongestWord1(arr) {
+  let splitArr = arr.split(" ");
+  let longest = splitArr[0];
+  for (let i = 1; i < splitArr.length; i++) {
+    if (splitArr[i].length > longest.length) {
+      longest = splitArr[i];
     }
+    // return longest;  여기 있으면 for문 처음 돌때 바로 반환 되서 0또는1번 인덱스가 출력
   }
-  return result;
+  return longest;
 }
-//done
+
+function getLongestWord2(arr) {
+  let splitArr = arr.split(" ");
+  let lengths = splitArr
+    .map((word) => word)
+    .sort((a, b) => b.length - a.length);
+  return lengths[0];
+}
+
+// let output = getLongestWord1("Teamwork skills will take you anywhere");
+// console.log(output); // --> "Teamwork"
+
+// let output1 = getLongestWord1("I love codestates");
+// console.log(output1); // --> "codestates"
+
+let output1 = getLongestWord2("I love codestates");
+console.log(output1); // --> "codestates"
